@@ -12,8 +12,9 @@ class Welcome:
             'tryout': 449446972215132161
         }
 
-    @commands.command(aliases=['EU', 'APAC', 'Americas', 'Tryout'])
-    async def visitor(self, ctx, member: discord.Member):
+    @commands.command(aliases=['eu', 'apac', 'americas', 'tryout'])
+    async def visitor(self, ctx, member: discord.Member = None):
+        member = member or ctx.author
         await member.add_roles(discord.utils.get(ctx.guild.roles, id=self.roles[ctx.invoked_with.lower()]))
         await ctx.send(f'Role given.')
 
