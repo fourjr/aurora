@@ -1,2 +1,3 @@
 git+https://github.com/Rapptz/discord.py@rewrite
-clashroyale
+clashroyale===3.5.2
+pytz
