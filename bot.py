@@ -18,7 +18,7 @@ except FileNotFoundError:
 
 class AuroraBot(commands.Bot):
     def __init__(self):
-        super().__init__(command_prefix=None)
+        super().__init__(command_prefix=None, case_insensitive=True)
         self.session = aiohttp.ClientSession(loop=self.loop)
         self.royaleapi = clashroyale.RoyaleAPI(os.environ.get('ROYALEAPI'), is_async=True, timeout=10, session=self.session)
 
