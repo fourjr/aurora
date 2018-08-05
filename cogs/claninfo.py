@@ -42,7 +42,7 @@ class ClanStats:
 
         await (await self.bot.get_channel(475624483747659806).get_message(475625300131184650)).edit(content='', embed=embed)
         if message:
-            await message.add_reaction('<:league7:475627853904609281>')
+            await message.add_reaction(':league7:475627853904609281')
 
     @commands.command()
     @commands.cooldown(1, 10, BucketType.default)
@@ -70,7 +70,7 @@ class ClanStats:
             if payload.emoji.name == 'league7':
                 await self.clanupdate()
             await message.clear_reactions()
-            await message.add_reaction('<:league7:475627853904609281>')
+            await message.add_reaction(':league7:475627853904609281')
 
 
 def setup(bot):
